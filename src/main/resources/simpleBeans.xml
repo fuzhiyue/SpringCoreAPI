@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="simpleBeans" class="com.simple.beans.ContructorInjectName">
+    <constructor-arg index="0" value="1"/>
+    <constructor-arg index="1">
+        <list>
+            <value></value>
+        </list>
+    </constructor-arg>
+    <constructor-arg index="2">
+        <map>
+            <entry key="" value=""/>
+        </map>
+    </constructor-arg>
+    <constructor-arg index="3">
+        <list>
+            <value></value>
+        </list>
+    </constructor-arg>
+    <constructor-arg name="intOfBean" value="1"/>
+    <constructor-arg type="double" value="1"/>
+</bean>
+    <bean id="simpleBeanx" class="com.simple.beans.SimpleBeans">
+        <property name="beanName" value="ContructorInjectName"/>
+    </bean>
+    <bean class="com.simple.beans.InitMethod" init-method="setInitFiled"/>
+    <bean class="com.simple.beans.DestructorBean" destroy-method="XMLdestroyMethod"/>
+</beans>
